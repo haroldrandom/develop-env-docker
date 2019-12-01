@@ -1,2 +1,2 @@
 # develop-env-environment
-Various development environment Dockerfiles
+Dockerfiles for various development environments
