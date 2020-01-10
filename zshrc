@@ -99,15 +99,15 @@ export LANG=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
 
 # golang
-export GOPATH=${HOME}/go
-export PATH="${GOPATH}/bin:${PATH}"
+# export GOPATH=${HOME}/go
+# export PATH="${GOPATH}/bin:${PATH}"
 
 # pyenv
 # export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-# export PYENV_ROOT="${HOME}/.pyenv"
-# export PATH="${PYENV_ROOT}/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT="${HOME}/.pyenv"
+export PATH="${PYENV_ROOT}/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # # nvm, node version management
 # export NVM_DIR="$HOME/.nvm"
