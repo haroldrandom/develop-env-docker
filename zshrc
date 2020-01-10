@@ -91,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="vim"
-alias vim="nvim"
+# alias vim="nvim"
 
 
 # LC
@@ -104,10 +104,10 @@ export PATH="${GOPATH}/bin:${PATH}"
 
 # pyenv
 # export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PYENV_ROOT="${HOME}/.pyenv"
-export PATH="${PYENV_ROOT}/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PYENV_ROOT="${HOME}/.pyenv"
+# export PATH="${PYENV_ROOT}/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # # nvm, node version management
 # export NVM_DIR="$HOME/.nvm"
