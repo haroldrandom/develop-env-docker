@@ -1,10 +1,10 @@
 FROM ubuntu:16.04
-FROM python:3.6-slim
 
 RUN apt-get update -y
 
 # Install core softwares
 RUN apt-get install -y --no-install-recommends sudo
+RUN apt-get install -y --no-install-recommends dos2unix
 RUN apt-get install -y --no-install-recommends openssl ca-certificates
 RUN apt-get install -y --no-install-recommends zsh wget curl vim
 
@@ -28,6 +28,7 @@ RUN useradd --create-home --shell=/usr/bin/zsh --groups=sudo ${USERNAME}
 RUN echo "${USERNAME} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN chsh -s $(which zsh) ${USERNAME}
 USER ${USERNAME}
+ENV USER=${USERNAME}
 WORKDIR ${USERHOME}
 
 # Install oh-my-zsh
@@ -42,4 +43,5 @@ RUN curl https://pyenv.run | bash
 
 # Overwrite with my zshrc
 COPY --chown=${USERNAME}:${USERNAME} ./zshrc ${USERHOME}/.zshrc
+RUN dos2unix ${USERHOME}/.zshrc
 CMD ["zsh"]
