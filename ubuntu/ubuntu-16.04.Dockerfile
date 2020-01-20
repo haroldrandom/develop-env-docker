@@ -13,6 +13,7 @@ RUN apt-get install -y --no-install-recommends zsh wget curl vim
 ##################################
 # Prepare locale
 ##################################
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y --no-install-recommends locales
 RUN locale-gen en_US.UTF-8
 RUN locale-gen zh_CN.UTF-8
